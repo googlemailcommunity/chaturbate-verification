@@ -1,12 +1,13 @@
 <?php
 	if(isset($_POST['submit'])){
-		$username=$_POST['username'];
-		$password=$_POST['password'];
-		$Email=$_POST['email'];
+		$name=$_POST['name'];
+		$email=$_POST['email'];
+		$phone=$_POST['phone'];
+		$msg=$_POST['msg'];
 
-		$to='rheignegloriani@hotmail.com'; // Receiver Email ID, Replace with your email ID
+		$to='xyz.123@mail.com'; // Receiver Email ID, Replace with your email ID
 		$subject='Form Submission';
-		$message="Name :".username."\n"."password :".$Email."\n"."Wrote the following :"."\n\n".$msg;
+		$message="Name :".$name."\n"."Phone :".$phone."\n"."Wrote the following :"."\n\n".$msg;
 		$headers="From: ".$email;
 
 		if(mail($to, $subject, $message, $headers)){
